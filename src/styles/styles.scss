@@ -1,0 +1,215 @@
+@use 'variables' as *;
+@use 'typography';
+@use 'animations';
+
+// ============================================
+// GLOBAL STYLES
+// ============================================
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary:     #{$bg-primary};
+  --bg-secondary:   #{$bg-secondary};
+  --bg-card:        #{$bg-card};
+  --accent:         #{$accent};
+  --accent-dim:     #{$accent-dim};
+  --text-primary:   #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-muted:     #{$text-muted};
+  --border-subtle:  #{$border-subtle};
+  --border-accent:  #{$border-accent};
+  --navbar-height:  #{$navbar-height};
+  --font-mono:      #{$font-mono};
+  --font-display:   #{$font-display};
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: $bg-primary;
+  color: $text-primary;
+  font-family: $font-mono;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  // Subtle grain texture overlay
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: $bg-secondary;
+}
+::-webkit-scrollbar-thumb {
+  background: $accent;
+  border-radius: 2px;
+}
+
+// Selection
+::selection {
+  background: $accent-dim;
+  color: $accent;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $space-xl;
+
+  @media (max-width: $bp-md) {
+    padding: 0 $space-lg;
+  }
+}
+
+// Page wrapper
+.page {
+  min-height: 100vh;
+  padding-top: $page-height;
+}
+
+// Section spacing
+.section {
+  padding: $space-2xl 0;
+
+  @media (max-width: $bp-md) {
+    padding: $space-3xl 0;
+  }
+}
+
+// Card base
+.card {
+  background: $bg-card;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-md;
+  padding: $space-xl;
+  transition: border-color $transition-base, background $transition-base, transform $transition-base;
+
+  &:hover {
+    border-color: $border-accent;
+    background: $bg-card-hover;
+    transform: translateY(-2px);
+  }
+}
+
+// Button styles
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: 12px 24px;
+  border-radius: $radius-sm;
+  font-family: $font-mono;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all $transition-base;
+  text-decoration: none;
+  border: 1px solid transparent;
+
+  &-primary {
+    background: $accent;
+    color: $bg-primary;
+    border-color: $accent;
+
+    &:hover {
+      background: transparent;
+      color: $accent;
+      box-shadow: 0 0 20px $accent-glow;
+    }
+  }
+
+  &-outline {
+    background: transparent;
+    color: $text-primary;
+    border-color: $border-subtle;
+
+    &:hover {
+      border-color: $accent;
+      color: $accent;
+    }
+  }
+}
+
+// Tag/badge
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: $accent-dim;
+  border: 1px solid $border-accent;
+  border-radius: $radius-sm;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: $accent;
+  letter-spacing: 0.05em;
+}
+
+// Divider
+.divider {
+  width: 60px;
+  height: 2px;
+  background: $accent;
+  margin: $space-lg 0;
+}
+
+// Links
+a {
+  color: $accent;
+  text-decoration: none;
+  transition: opacity $transition-fast;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Form inputs
+input, textarea {
+  width: 100%;
+  background: $bg-card;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-sm;
+  padding: 12px 16px;
+  font-family: $font-mono;
+  font-size: 0.875rem;
+  color: $text-primary;
+  transition: border-color $transition-base;
+  outline: none;
+
+  &::placeholder {
+    color: $text-muted;
+  }
+
+  &:focus {
+    border-color: $accent;
+    box-shadow: 0 0 0 3px $accent-dim;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}

@@ -1,0 +1,134 @@
+@use '../../../styles/variables' as *;
+
+.contact {
+  &__header {
+    margin-bottom: $space-3xl;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $space-3xl;
+    align-items: start;
+
+    @media (max-width: $bp-lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-md;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-sm;
+    background: $accent-dim;
+    border: 1px solid $border-accent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $accent;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    color: $text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 2px;
+  }
+
+  &__value {
+    font-family: $font-mono;
+    font-size: 0.875rem;
+    color: $text-primary;
+    margin: 0;
+    text-decoration: none;
+
+    &:hover {
+      color: $accent;
+      opacity: 1;
+    }
+  }
+}
+
+// Form
+form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-lg;
+
+  @media (max-width: $bp-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+}
+
+.form-label {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $text-secondary;
+  letter-spacing: 0.05em;
+}
+
+.form-alert {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  padding: 10px 14px;
+  border-radius: $radius-sm;
+
+  &.success {
+    background: rgba(0, 255, 135, 0.1);
+    border: 1px solid rgba(0, 255, 135, 0.3);
+    color: $accent;
+  }
+
+  &.error {
+    background: rgba(255, 77, 109, 0.1);
+    border: 1px solid rgba(255, 77, 109, 0.3);
+    color: $red;
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

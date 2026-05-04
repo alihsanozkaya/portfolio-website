@@ -1,0 +1,103 @@
+<div class="page">
+  <div class="container">
+    <section class="section resume">
+      <!-- Header -->
+      <div class="resume__header animate-fade-up delay-1">
+        <div>
+          <h1 class="section-title">{{ "resume.title" | translate }}</h1>
+        </div>
+        <a [href]="cvPath" download class="btn btn-outline">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"
+            />
+          </svg>
+          {{ "resume.download" | translate }}
+        </a>
+      </div>
+      <div class="resume__content">
+        <!-- Experience -->
+        <div class="resume__section animate-fade-up delay-2">
+          <h2 class="resume__section-title">
+            {{ "resume.experience" | translate }}
+          </h2>
+          <div class="timeline">
+            @for (exp of experiences; track exp.company) {
+              <div class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <div class="timeline__header">
+                    <div>
+                      <h3 class="timeline__role">{{ exp.role | translate }}</h3>
+                      <span class="timeline__company">{{
+                        exp.company | translate
+                      }}</span>
+                    </div>
+                    <span class="timeline__period">
+                      {{ exp.period }} — {{ exp.endKey | translate }}
+                    </span>
+                  </div>
+                  <p class="timeline__desc">
+                    {{ exp.description | translate }}
+                  </p>
+                  <div class="timeline__tags">
+                    @for (tag of exp.tags; track tag) {
+                      <span class="tag">{{ tag }}</span>
+                    }
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+        <!-- Education -->
+        <div class="resume__section animate-fade-up delay-3">
+          <h2 class="resume__section-title">
+            {{ "resume.education" | translate }}
+          </h2>
+          <div class="timeline">
+            @for (edu of education; track edu.institution) {
+              <div class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <div class="timeline__header">
+                    <div>
+                      <h3 class="timeline__role">
+                        <span class="role-main">
+                          {{ edu.degree | translate }} —
+                          {{ edu.field | translate }}
+                        </span>
+                        <span class="role-gpa">
+                          {{ "resume.education_gpa" | translate }}
+                        </span>
+                      </h3>
+                      <span class="timeline__company">{{
+                        edu.institution | translate
+                      }}</span>
+                    </div>
+                    <span class="timeline__period">{{ edu.period }}</span>
+                  </div>
+                  <p class="timeline__desc">
+                    {{ "resume.education_description" | translate }}
+                  </p>
+                  <div class="timeline__tags">
+                    @for (tag of edu.tags; track tag) {
+                      <span class="tag">{{ tag | translate }}</span>
+                    }
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

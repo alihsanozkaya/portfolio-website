@@ -1,0 +1,34 @@
+@use "../../../styles/variables" as *;
+
+.about {
+  &__header {
+    margin-bottom: $space-xl;
+  }
+
+  &__bio {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+  }
+
+  &__text {
+    p {
+      margin-bottom: $space-lg;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: $text-secondary;
+    }
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}

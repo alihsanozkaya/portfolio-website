@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "resume": "Resume",
+    "certificate": "Certificates",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "name": "Ali Ihsan Ozkaya",
+    "role": "Software Development Specialist",
+    "cta_work": "View My Work",
+    "cta_contact": "Get In Touch",
+    "cta_cv": "Ali_Ihsan_Ozkaya_CV_EN.pdf"
+  },
+  "about": {
+    "title": "About Me",
+    "bio_1": "As a Software Development Specialist deeply rooted in the Angular ecosystem, I architect scalable component structures and sophisticated data entry systems (Dynamic Reactive Forms, FormArray) for enterprise-level DCIM (Data Center Infrastructure Management) projects comprising 10+ modules. I am driven by a rigorous engineering discipline, transforming complex business workflows into high-performance, testable, and sustainable codebases.",
+    "bio_2": "My expertise lies in developing innovative hybrid interface solutions by integrating Unity UI Toolkit (UXML/USS) and WebGL for real-time visualization components like Single Line Diagrams and Super Sensors. I specialize in architecting backend-driven dynamic UI engines and ensuring seamless high-density data synchronization via RxJS, with a specific focus on optimizing high-fidelity interfaces for 4K industrial displays.",
+    "skills_title": "Technical Expertise",
+    "experience_title": "Professional Experience",
+    "years": "Years of Experience",
+    "projects": "Enterprise Modules",
+    "clients": "Success Score"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "all": "All",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "unity": "Unity",
+    "automation": "Automation",
+    "view_project": "View Project",
+    "view_code": "View Code",
+    "project_1": {
+      "title": "Disaster Project UI",
+      "description": "A React-based frontend featuring Google Maps integration for real-time disaster coordination and resource tracking."
+    },
+    "project_2": {
+      "title": "Billing Assistant UI",
+      "description": "A modern web interface built with React and Redux, featuring multi-language support for streamlined invoice management."
+    },
+    "project_3": {
+      "title": "Billing Assistant API",
+      "description": "A secure RESTful API featuring JWT and Tesseract OCR for automated bill data extraction, built with .NET and PostgreSQL."
+    },
+    "project_4": {
+      "title": "Football Quiz",
+      "description": "A quiz game developed with Unity and UI Toolkit, focusing on performant UI patterns and interactive gameplay."
+    },
+    "project_5": {
+      "title": "TCDD Bot",
+      "description": "An automation tool built with Playwright and Telegram API for real-time monitoring and notification of train ticket availability."
+    },
+    "project_6": {
+      "title": "TCDD Bot API",
+      "description": "A Node.js and MongoDB based backend service providing data orchestration and API support for the TCDD monitoring system."
+    }
+  },
+  "resume": {
+    "title": "Resume",
+    "download": "Download PDF",
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "present": "Present",
+    "company_1": {
+      "name": "Birtech Technology",
+      "role": "Software Development Specialist",
+      "description": "Architected and developed sensor monitoring, asset management and single line diagram modules for a DCIM application. Focused on implementing complex dynamic form systems and high-performance dashboards within a scalable Angular enterprise architecture."
+    },
+    "company_2": {
+      "name": "Bihl+Wiedemann",
+      "role": "Computer Engineering Intern",
+      "description": "Developed an end-to-end CV management application built on .NET Web API and PostgreSQL architecture, utilizing React for the frontend. Managed database design and RESTful API integration processes, taking an active role in the entire full-stack development lifecycle."
+    },
+    "education_institution": "Konya Technical University",
+    "education_degree": "Bachelor's Degree",
+    "education_field": "Computer Engineering",
+    "education_gpa": "GPA: 3.59 / 4.00",
+    "education_description": "Gained proficiency in core principles such as Data Structures, OOP, and Design Patterns. Focused on relational data modeling and query optimization while developing a discipline for architecting algorithmic solutions and sustainable software.",
+    "tags": {
+      "oop": "Object Oriented Programming (OOP)",
+      "data_structures": "Data Structures",
+      "design_patterns": "Design Patterns",
+      "sql": "SQL",
+      "relational_modeling": "Relational Modeling"
+    }
+  },
+  "certificate": {
+    "title": "Certificates",
+    "issued": "Issued",
+    "verify": "Verify Certificate",
+    "certificate_title_1": "Modern Web Development from Scratch with ASP.NET Core 7.0 (2023)",
+    "certificate_title_2": "Agile Development Day - 2024",
+    "certificate_title_3": "Beginner Frontend Web Development Path",
+    "certificate_title_4": "Introduction to Digital Game Development with Unity"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Your Name",
+    "email": "Email Address",
+    "subject": "Subject",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again.",
+    "location": "Location",
+    "email_label": "Email",
+    "phone": "Phone"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

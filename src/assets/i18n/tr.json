@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "portfolio": "Portföy",
+    "resume": "Özgeçmiş",
+    "certificate": "Sertifikalar",
+    "contact": "İletişim"
+  },
+  "home": {
+    "greeting": "Merhaba, Ben",
+    "name": "Ali İhsan Özkaya",
+    "role": "Yazılım Geliştirme Uzmanı",
+    "cta_work": "Çalışmalarımı Gör",
+    "cta_contact": "İletişime Geç",
+    "cta_cv": "Ali_Ihsan_Ozkaya_CV_TR.pdf"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "bio_1": "Angular ekosisteminde derinleşmiş bir Yazılım Geliştirme Uzmanı olarak, 10'dan fazla modül içeren kurumsal ölçekli DCIM (Veri Merkezi Altyapı Yönetimi) projelerinde ölçeklenebilir komponent mimarileri ve karmaşık veri giriş sistemleri (Dynamic Reactive Forms, FormArray) inşa ediyorum. Mühendislik disiplinini merkeze alarak, karmaşık iş süreçlerini yüksek performanslı, test edilebilir ve sürdürülebilir koda dönüştürme konusunda tutkuluyum.",
+    "bio_2": "Özellikle Unity UI Toolkit (UXML/USS) ve WebGL teknolojilerini kullanarak, Single Line Diagram ve Super Sensor gibi gerçek zamanlı veri görselleştirme bileşenlerini web ortamına entegre eden yenilikçi hibrit arayüz çözümleri üretiyorum. RxJS ile yüksek yoğunluklu veri senkronizasyonu sağlama ve backend-driven dinamik UI motorları kurgulama konularında derinleşirken, geliştirilen arayüzlerin 4K çözünürlük altındaki endüstriyel ekranlarda bile en yüksek performansta çalışmasını sağlıyorum.",
+    "skills_title": "Teknik Uzmanlıklar",
+    "experience_title": "Mesleki Deneyim",
+    "years": "Yıl Sektör Deneyimi",
+    "projects": "Büyük Ölçekli Modül",
+    "clients": "Teknik Başarı Skoru"
+  },
+  "portfolio": {
+    "title": "Portföy",
+    "all": "Tümü",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "unity": "Unity",
+    "automation": "Otomasyon",
+    "view_project": "Projeyi Gör",
+    "view_code": "Kodu Gör",
+    "project_1": {
+      "title": "Afet Projei UI",
+      "description": "Afet koordinasyonu ve kaynak takibi için Google Haritalar entegrasyonuna sahip, React tabanlı bir frontend projesi."
+    },
+    "project_2": {
+      "title": "Fatura Asistanı UI",
+      "description": "Fatura yönetimi için React ve Redux ile geliştirilmiş, çok dilli destek sunan modern bir kullanıcı arayüzü."
+    },
+    "project_3": {
+      "title": "Fatura Asistanı API",
+      "description": "JWT yetkilendirme ve Tesseract OCR ile fatura verilerini otomatik işleme yeteneğine sahip, .NET ve PostgreSQL tabanlı güvenli bir API."
+    },
+    "project_4": {
+      "title": "Futbol Quiz",
+      "description": "Unity ve UI Toolkit kullanılarak geliştirilmiş, performanslı arayüz yapılarına ve etkileşimli oynanışa odaklanan bir oyun."
+    },
+    "project_5": {
+      "title": "TCDD Bot",
+      "description": "Playwright ve Telegram API kullanılarak geliştirilen, tren bileti uygunluğunu anlık izleyen ve bildiren bir otomasyon aracı."
+    },
+    "project_6": {
+      "title": "TCDD Bot API",
+      "description": "TCDD izleme sistemi için veri yönetimi ve API desteği sağlayan, Node.js ve MongoDB tabanlı bir backend servisi."
+    }
+  },
+  "resume": {
+    "title": "Özgeçmiş",
+    "download": "PDF İndir",
+    "experience": "Deneyim",
+    "education": "Eğitim",
+    "skills": "Beceriler",
+    "present": "Günümüz",
+    "company_1": {
+      "name": "Birtech Teknoloji",
+      "role": "Yazılım Geliştirme Uzmanı",
+      "description": "DCIM uygulaması kapsamında sensör izleme, asset yönetimi ve tek hat şeması modüllerini geliştirdim. Angular tabanlı kurumsal mimaride dinamik form yapıları ve yüksek performanslı dashboardlar kurguladım."
+    },
+    "company_2": {
+      "name": "Bihl+Wiedemann",
+      "role": "Bilgisayar Mühendisliği Stajyeri",
+      "description": ".NET Web API ve PostgreSQL mimarisi üzerine kurulu, frontend tarafında React kullanılan uçtan uca bir CV yönetim uygulaması geliştirdim. Veri tabanı tasarımı ve RESTful API entegrasyonu süreçlerini yöneterek, full-stack bir projenin tüm yaşam döngüsünde aktif rol aldım."
+    },
+    "education_institution": "Konya Teknik Üniversitesi",
+    "education_degree": "Lisans Derecesi",
+    "education_field": "Bilgisayar Mühendisliği",
+    "education_gpa": "GANO: 3.59 / 4.00",
+    "education_description": "Veri Yapıları, OOP ve Yazılım Tasarım Desenleri konularında derinlik kazandım. İlişkisel veri modelleme ve sorgu optimizasyonu süreçlerinde deneyim edinerek, karmaşık problemler için algoritmik çözüm üretme disiplini kazandım.",
+    "tags": {
+      "oop": "Nesne Yönelimli Programlama (OOP)",
+      "data_structures": "Veri Yapıları",
+      "design_patterns": "Tasarım Desenleri",
+      "sql": "SQL",
+      "relational_modeling": "İlişkisel Modelleme"
+    }
+  },
+  "certificate": {
+    "title": "Sertifikalar",
+    "issued": "Verilme Tarihi",
+    "verify": "Sertifikayı Doğrula",
+    "certificate_title_1": "ASP.NET Core 7.0 ile Sıfırdan Modern Web Geliştirme (2023)",
+    "certificate_title_2": "Agile Geliştirme Günü - 2024",
+    "certificate_title_3": "Başlangıç Seviye Frontend Web Development Patikası",
+    "certificate_title_4": "Unity ile Dijital Oyun Geliştirmeye Giriş"
+  },
+  "contact": {
+    "title": "İletişim",
+    "name": "Adınız",
+    "email": "E-posta Adresiniz",
+    "subject": "Konu",
+    "message": "Mesajınız",
+    "send": "Mesaj Gönder",
+    "sending": "Gönderiliyor...",
+    "success": "Mesajınız başarıyla gönderildi!",
+    "error": "Bir şeyler yanlış gitti. Lütfen tekrar deneyin.",
+    "location": "Konum",
+    "email_label": "E-posta",
+    "phone": "Telefon"
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır."
+  }
+}

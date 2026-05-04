@@ -1,0 +1,82 @@
+@use 'variables' as *;
+
+// ============================================
+// ANIMATIONS
+// ============================================
+
+// Fade In Up
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Fade In
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+// Blink cursor
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+// Glow pulse
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px $accent-glow; }
+  50%       { box-shadow: 0 0 30px $accent-glow, 0 0 60px rgba(0,255,135,0.2); }
+}
+
+// Slide in from left
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Scan line
+@keyframes scanLine {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+// View transition styles
+::view-transition-old(root) {
+  animation: 200ms ease-out fadeOut;
+}
+
+::view-transition-new(root) {
+  animation: 300ms ease-in fadeInUp;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+// Utility animation classes
+.animate-fade-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@for $i from 1 through 8 {
+  .delay-#{$i} {
+    animation-delay: #{$i * 0.1}s;
+    opacity: 0;
+  }
+}

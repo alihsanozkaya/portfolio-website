@@ -1,0 +1,265 @@
+@use "../../../styles/variables" as *;
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-3xl;
+  padding: $navbar-height $space-xl $space-3xl;
+  max-width: $max-width;
+  margin: 0 auto;
+  position: relative;
+
+  @media (max-width: $bp-lg) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: $bp-md) {
+    padding: $navbar-height $space-lg $space-2xl;
+  }
+
+  // Background grid
+  &__grid {
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 255, 135, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 135, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  // Status badge
+  &__status {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-sm;
+    background: $accent-dim;
+    border: 1px solid $border-accent;
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $accent;
+    margin-bottom: $space-xl;
+  }
+
+  &__greeting {
+    font-family: $font-mono;
+    font-size: 1rem;
+    color: $text-muted;
+    margin-bottom: $space-sm;
+  }
+
+  &__name {
+    font-family: $font-display;
+    font-weight: 900;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1;
+    color: $text-primary;
+    margin-bottom: $space-lg;
+  }
+
+  &__role {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: $font-mono;
+    font-size: clamp(1rem, 2.5vw, 1.375rem);
+    margin-bottom: $space-xl;
+
+    @media (max-width: $bp-lg) {
+      justify-content: center;
+    }
+  }
+
+  &__role-prefix {
+    color: $accent;
+    opacity: 0.5;
+  }
+
+  &__role-text {
+    color: $text-secondary;
+    white-space: pre;
+  }
+
+  &__role-wrapper {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__cursor {
+    margin-left: 2px;
+    color: $accent;
+    font-weight: bold;
+    line-height: 1;
+    animation: blink 1s step-end infinite;
+  }
+
+  &__ctas {
+    display: flex;
+    gap: $space-md;
+    flex-wrap: wrap;
+
+    @media (max-width: $bp-lg) {
+      justify-content: center;
+    }
+  }
+
+  &__scroll {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    margin-top: $space-3xl;
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    color: $text-muted;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    @media (max-width: $bp-lg) {
+      justify-content: center;
+    }
+  }
+
+  // Decoration (code block)
+  &__decoration {
+    flex: 0 0 auto;
+    width: min(420px, 100%);
+    z-index: 1;
+
+    @media (max-width: $bp-lg) {
+      width: 100%;
+      max-width: 500px;
+      margin-top: $space-md;
+      text-align: left;
+    }
+  }
+
+  &__code-block {
+    background: $bg-card;
+    border: 1px solid $border-subtle;
+    border-radius: $radius-md;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: $bp-md) {
+      .code-body code {
+        font-size: 0.75rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+// Scroll line animation
+.scroll-line {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, $accent, transparent);
+  animation: scrollPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+// Status dot
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $accent;
+  animation: glowPulse 2s ease infinite;
+}
+
+// Code block styles
+.code-header {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: 12px $space-md;
+  border-bottom: 1px solid $border-subtle;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  &.red {
+    background: $red;
+  }
+  &.yellow {
+    background: $yellow;
+  }
+  &.green {
+    background: $accent;
+  }
+}
+
+.code-filename {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  color: $text-muted;
+  margin-left: $space-xs;
+}
+
+.code-body {
+  padding: $space-lg;
+  margin: 0;
+  overflow: auto;
+
+  code {
+    font-family: $font-mono;
+    font-size: 0.875rem;
+    line-height: 1.8;
+    display: block;
+  }
+}
+
+// Syntax highlighting
+.c-keyword {
+  color: #c678dd;
+}
+.c-var {
+  color: #e06c75;
+}
+.c-prop {
+  color: #61afef;
+}
+.c-str {
+  color: #98c379;
+}
+.c-num {
+  color: #d19a66;
+}
+.c-bool {
+  color: #56b6c2;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,135 @@
+@use "../../../styles/variables" as *;
+
+.resume {
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: $space-3xl;
+    flex-wrap: wrap;
+    gap: $space-lg;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3xl;
+  }
+
+  &__section-title {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: $space-xl;
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: $border-subtle;
+    }
+  }
+}
+
+// Timeline
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 28px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background: $border-subtle;
+  }
+
+  &__item {
+    position: relative;
+    padding-bottom: $space-2xl;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__dot {
+    position: absolute;
+    left: -25px;
+    top: 8px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: $bg-primary;
+    border: 2px solid $accent;
+    box-shadow: 0 0 8px $accent-glow;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $space-md;
+    margin-bottom: $space-md;
+    flex-wrap: wrap;
+  }
+
+  &__role {
+    font-family: $font-display;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 4px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .role-main {
+      font-size: 1.25rem;
+    }
+
+    .role-gpa {
+      font-family: $font-mono;
+      font-size: 0.8rem;
+      color: $text-muted;
+      font-weight: 400;
+    }
+  }
+
+  &__company {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    color: $accent;
+  }
+
+  &__period {
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $text-muted;
+    white-space: nowrap;
+  }
+
+  &__desc {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: $text-secondary;
+    margin-bottom: $space-md;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-xs;
+  }
+}

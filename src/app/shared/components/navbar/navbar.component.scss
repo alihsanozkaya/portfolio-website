@@ -1,0 +1,229 @@
+@use "../../../../styles/variables" as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-navbar;
+  height: $navbar-height;
+  transition:
+    background $transition-base,
+    border-color $transition-base,
+    backdrop-filter $transition-base;
+  border-bottom: 1px solid transparent;
+
+  &.scrolled {
+    background: rgba($bg-primary, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom-color: $border-subtle;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $space-xl;
+    height: 100%;
+
+    @media (max-width: $bp-md) {
+      padding: 0 $space-lg;
+    }
+  }
+
+  // Logo
+  &__logo {
+    font-family: $font-mono;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $text-primary;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &-bracket {
+      color: $accent;
+    }
+
+    &-name {
+      padding: 0 2px;
+    }
+  }
+
+  // Links
+  &__links {
+    display: flex;
+    list-style: none;
+    gap: $space-xs;
+    align-items: center;
+
+    @media (max-width: $bp-lg) {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: $text-secondary;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: $radius-sm;
+    border: 1px solid transparent;
+    transition: all $transition-fast;
+
+    &:hover {
+      color: $text-primary;
+      opacity: 1;
+    }
+
+    &.active {
+      color: $accent;
+      border-color: $border-accent;
+      background: $accent-dim;
+    }
+  }
+
+  // Controls
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+  }
+}
+
+// Language toggle
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-sm;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: $text-muted;
+  transition: all $transition-fast;
+
+  &:hover {
+    border-color: $border-accent;
+  }
+
+  span.active {
+    color: $accent;
+  }
+
+  &__sep {
+    opacity: 0.3;
+  }
+}
+
+// Hamburger
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  width: 28px;
+  height: 28px;
+
+  @media (max-width: $bp-lg) {
+    display: flex;
+  }
+
+  span {
+    display: block;
+    height: 1.5px;
+    background: $text-secondary;
+    border-radius: 1px;
+    transition: all $transition-fast;
+    transform-origin: center;
+
+    &:first-child {
+      width: 100%;
+    }
+    &:nth-child(2) {
+      width: 65%;
+    }
+    &:last-child {
+      width: 100%;
+    }
+  }
+
+  &.open {
+    span:first-child {
+      transform: rotate(45deg) translateY(7px);
+      width: 100%;
+      background: $accent;
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:last-child {
+      transform: rotate(-45deg) translateY(-7px);
+      background: $accent;
+    }
+  }
+}
+
+// Mobile menu
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: rgba($bg-primary, 0.98);
+  backdrop-filter: blur(16px);
+
+  display: flex;
+  flex-direction: column;
+  padding: 120px $space-lg $space-xl;
+  gap: $space-sm;
+
+  z-index: $z-navbar - 1;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    font-family: $font-display;
+    font-size: 2rem;
+    font-weight: 900;
+    color: $text-secondary;
+    text-decoration: none;
+    padding: $space-md 0;
+    border-bottom: 1px solid $border-subtle;
+    transition: color $transition-fast;
+
+    &:hover,
+    &.active {
+      color: $accent;
+      opacity: 1;
+    }
+  }
+}

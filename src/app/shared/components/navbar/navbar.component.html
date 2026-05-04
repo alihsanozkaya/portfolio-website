@@ -1,0 +1,65 @@
+<nav class="navbar" [class.scrolled]="isScrolled()">
+  <div class="navbar__inner">
+    <!-- Logo -->
+    <a (click)="scrollTo('home')" class="navbar__logo" style="cursor: pointer">
+      <span class="navbar__logo-bracket">&lt;</span>
+      <span class="navbar__logo-name">AIO</span>
+      <span class="navbar__logo-bracket">/&gt;</span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <ul class="navbar__links">
+      @for (item of navItems; track item.id) {
+        <li>
+          <a
+            (click)="scrollTo(item.id)"
+            [class.active]="activeSection() === item.id"
+            class="navbar__link"
+            style="cursor: pointer"
+          >
+            {{ item.key | translate }}
+          </a>
+        </li>
+      }
+    </ul>
+
+    <!-- Right controls -->
+    <div class="navbar__controls">
+      <!-- Language toggle -->
+      <button
+        class="lang-toggle"
+        (click)="toggleLanguage()"
+        [attr.aria-label]="'Switch language'"
+      >
+        <span [class.active]="currentLang() === 'en'">EN</span>
+        <span class="lang-toggle__sep">/</span>
+        <span [class.active]="currentLang() === 'tr'">TR</span>
+      </button>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="hamburger"
+        (click)="toggleMobile()"
+        [class.open]="isMobileOpen()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" [class.open]="isMobileOpen()">
+    @for (item of navItems; track item.id) {
+      <a
+        (click)="scrollTo(item.id)"
+        [class.active]="activeSection() === item.id"
+        class="mobile-menu__link"
+      >
+        <span class="mobile-menu__index">0{{ $index + 1 }}</span>
+        {{ item.key | translate }}
+      </a>
+    }
+  </div>
+</nav>

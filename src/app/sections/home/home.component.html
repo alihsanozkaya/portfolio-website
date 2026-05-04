@@ -1,0 +1,89 @@
+<section class="hero">
+  <!-- Background grid -->
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__content">
+    <!-- Greeting -->
+    <p class="hero__greeting animate-fade-up delay-2">
+      {{ "home.greeting" | translate }}
+    </p>
+    <!-- Name -->
+    <h1 class="hero__name animate-fade-up delay-3">
+      {{ "home.name" | translate }}
+    </h1>
+    <!-- Typing role -->
+    <div class="hero__role animate-fade-up delay-4">
+      <span class="hero__role-prefix">~/</span>
+      <!-- Metin ve İmleç aynı hizada olmalı -->
+      <span class="hero__role-wrapper">
+        <span #typingEl class="hero__role-text"></span>
+        <span class="hero__cursor">_</span>
+      </span>
+    </div>
+    <!-- CTAs -->
+    <div class="hero__ctas animate-fade-up delay-6">
+      <button (click)="scrollTo('portfolio')" class="btn btn-primary">
+        {{ "home.cta_work" | translate }}
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path
+            d="M1 7h12M8 2l5 5-5 5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+      <button (click)="scrollTo('contact')" class="btn btn-outline">
+        {{ "home.cta_contact" | translate }}
+      </button>
+      <button (click)="downloadCV()" class="btn btn-outline">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          style="margin-right: 8px; vertical-align: middle"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        {{ "home.cta_cv" | translate }}
+      </button>
+    </div>
+  </div>
+  <!-- Right decoration -->
+  <div class="hero__decoration" aria-hidden="true">
+    <div class="hero__code-block">
+      <div class="code-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="code-filename">developer.ts</span>
+      </div>
+      <pre
+        class="code-body"
+      ><code><span class="c-keyword">const</span> <span class="c-var">developer</span> = &#123;
+  <span class="c-prop">name</span>: <span class="c-str">{{ "home.name" | translate }}</span>,
+  <span class="c-prop">role</span>: <span class="c-str">{{ "home.role" | translate }}</span>,
+  <span class="c-prop">skills</span>: [
+    <span class="c-str">"Angular"</span>,
+    <span class="c-str">"TypeScript"</span>,
+    <span class="c-str">"JavaScript"</span>,
+    <span class="c-str">"Node.js"</span>,
+    <span class="c-str">"C#"</span>,
+    <span class="c-str">"Unity"</span>,
+    <span class="c-str">"UI Toolkit"</span>,
+    <span class="c-str">"HTML"</span>,
+    <span class="c-str">"CSS"</span>
+  ],
+  <span class="c-prop">isCleanCoder</span>: <span class="c-bool">true</span>
+  <span class="c-prop">isProblemSolver</span>: <span class="c-bool">true</span>
+&#125;;</code></pre>
+    </div>
+  </div>
+</section>

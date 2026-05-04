@@ -1,0 +1,67 @@
+<div class="page">
+  <div class="container">
+    <section class="section certs">
+      <div class="certs__header animate-fade-up delay-1">
+        <h1 class="section-title">{{ "certificate.title" | translate }}</h1>
+      </div>
+      <div class="certs__grid">
+        @for (cert of certificates; track cert.id) {
+          <div class="cert-card animate-fade-up">
+            <div class="cert-card__badge">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <circle
+                  cx="12"
+                  cy="8"
+                  r="6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="cert-card__content">
+              <div class="cert-card__top">
+                <span class="tag">{{ cert.category }}</span>
+                <span class="cert-card__date"
+                  >{{ "certificate.issued" | translate }}: {{ cert.date }}</span
+                >
+              </div>
+              <h3 class="cert-card__title">{{ cert.title | translate }}</h3>
+              <p class="cert-card__issuer">{{ cert.issuer }}</p>
+              @if (cert.credentialId) {
+                <p class="cert-card__id">ID: {{ cert.credentialId }}</p>
+              }
+              @if (cert.verifyUrl) {
+                <a
+                  [href]="cert.verifyUrl"
+                  target="_blank"
+                  class="cert-card__verify"
+                >
+                  {{ "certificate.verify" | translate }}
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"
+                    />
+                  </svg>
+                </a>
+              }
+            </div>
+          </div>
+        }
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+@use 'variables' as *;
+
+// ============================================
+// TYPOGRAPHY
+// ============================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: 600;
+  line-height: 1.1;
+  color: $text-primary;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h4 { font-size: clamp(1.2rem, 2vw, 1.75rem); }
+
+p {
+  font-family: $font-mono;
+  line-height: 1.7;
+  color: $text-secondary;
+}
+
+.mono {
+  font-family: $font-mono;
+}
+
+.display {
+  font-family: $font-display;
+}
+
+// Accent label — small monospace tag
+.label {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $accent;
+
+  &::before {
+    content: '// ';
+    opacity: 0.5;
+  }
+}
+
+// Section title pair
+.section-label {
+  @extend .label;
+  margin-bottom: $space-sm;
+  display: block;
+}
+
+.section-title {
+  font-family: $font-display;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: $text-primary;
+  line-height: 1;
+  margin: 0;
+}
+
+// Gradient text
+.gradient-text {
+  background: linear-gradient(135deg, $accent 0%, $blue 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

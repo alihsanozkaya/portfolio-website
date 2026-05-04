@@ -1,0 +1,90 @@
+@use "../../../styles/variables" as *;
+
+.certs {
+  &__header {
+    margin-bottom: $space-3xl;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: $space-lg;
+  }
+}
+
+.cert-card {
+  display: flex;
+  gap: $space-lg;
+  align-items: flex-start;
+
+  &__badge {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: $accent-dim;
+    border: 1px solid $border-accent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $accent;
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-sm;
+    margin-bottom: $space-sm;
+    flex-wrap: wrap;
+  }
+
+  &__date {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    color: $text-muted;
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+
+  &__issuer {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    color: $text-secondary;
+    margin: 0 0 4px;
+  }
+
+  &__id {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    color: $text-muted;
+    margin: 0 0 $space-md;
+  }
+
+  &__verify {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    color: $accent;
+    text-decoration: none;
+    transition: opacity $transition-fast;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
