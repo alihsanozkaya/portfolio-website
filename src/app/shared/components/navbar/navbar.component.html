@@ -51,6 +51,7 @@
 
   <!-- Mobile menu -->
   <div class="mobile-menu" [class.open]="isMobileOpen()">
+    <button class="mobile-menu__close" (click)="toggleMobile()">✕</button>
     @for (item of navItems; track item.id) {
       <a
         (click)="scrollTo(item.id)"
