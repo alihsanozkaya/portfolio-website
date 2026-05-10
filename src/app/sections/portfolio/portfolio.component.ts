@@ -84,9 +84,13 @@ export class PortfolioComponent {
 
   filteredProjects = computed(() => {
     const f = this.activeFilter();
-    return f === "all"
-      ? this.projects
-      : this.projects.filter((p) => p.category === f);
+
+    const list =
+      f === "all"
+        ? this.projects
+        : this.projects.filter((p) => p.category === f);
+
+    return [...list].sort((a, b) => b.id - a.id);
   });
 
   setFilter(filter: string): void {

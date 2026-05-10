@@ -76,6 +76,11 @@
       "role": "Bilgisayar Mühendisliği Stajyeri",
       "description": ".NET Web API ve PostgreSQL mimarisi üzerine kurulu, frontend tarafında React kullanılan uçtan uca bir CV yönetim uygulaması geliştirdim. Veri tabanı tasarımı ve RESTful API entegrasyonu süreçlerini yöneterek, full-stack bir projenin tüm yaşam döngüsünde aktif rol aldım."
     },
+    "company_3": {
+      "name": "Ufer Media Group",
+      "role": "Bilgisayar Mühendisliği Stajyeri",
+      "description": "cPanel altyapı yönetimi ve WordPress ekosisteminde ileri seviye tema özelleştirme projeleri yürüttüm. Google standartlarına uygun teknik SEO optimizasyonları gerçekleştirerek, web sitelerinin performans ve arama motoru görünürlüğünü üst seviyeye taşıdım."
+    },
     "education_institution": "Konya Teknik Üniversitesi",
     "education_degree": "Lisans Derecesi",
     "education_field": "Bilgisayar Mühendisliği",

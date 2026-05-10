@@ -17,7 +17,8 @@ export class CertificateComponent {
       issuer: "Udemy",
       date: "08/2023",
       credentialId: "UC-cfe8bae0-c190-4d14-a4cf-1bea2699cac2",
-      verifyUrl: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-cfe8bae0-c190-4d14-a4cf-1bea2699cac2.pdf",
+      verifyUrl:
+        "https://udemy-certificate.s3.amazonaws.com/pdf/UC-cfe8bae0-c190-4d14-a4cf-1bea2699cac2.pdf",
       category: "Backend",
     },
     {
@@ -26,7 +27,8 @@ export class CertificateComponent {
       issuer: "Coderspace",
       date: "05/2024",
       credentialId: "6aa22662-7647-469c-8839-b06dfd56c227",
-      verifyUrl: "https://coderspace.io/sertifikalar/6aa22662-7647-469c-8839-b06dfd56c227",
+      verifyUrl:
+        "https://coderspace.io/sertifikalar/6aa22662-7647-469c-8839-b06dfd56c227",
       category: "Agile",
     },
     {
@@ -44,8 +46,13 @@ export class CertificateComponent {
       issuer: "BTK Akademi",
       date: "07/2025",
       credentialId: "Ko9fELAdK8",
-      verifyUrl: "https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=Ko9fELAdK8",
+      verifyUrl:
+        "https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=Ko9fELAdK8",
       category: "Unity",
     },
   ];
+
+  get sortedCertificates(): Certificate[] {
+    return [...this.certificates].sort((a, b) => b.id - a.id);
+  }
 }

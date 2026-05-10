@@ -76,6 +76,11 @@
       "role": "Computer Engineering Intern",
       "description": "Developed an end-to-end CV management application built on .NET Web API and PostgreSQL architecture, utilizing React for the frontend. Managed database design and RESTful API integration processes, taking an active role in the entire full-stack development lifecycle."
     },
+    "company_3": {
+      "name": "Ufer Media Group",
+      "role": "Computer Engineering Intern",
+      "description": "I managed infrastructure via cPanel and delivered advanced custom solutions within the WordPress ecosystem. I optimized digital assets for maximum performance and visibility by implementing technical SEO strategies in line with Google Webmaster standards."
+    },
     "education_institution": "Konya Technical University",
     "education_degree": "Bachelor's Degree",
     "education_field": "Computer Engineering",

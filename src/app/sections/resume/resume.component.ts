@@ -28,6 +28,14 @@ export class ResumeComponent {
       description: "resume.company_2.description",
       tags: [".NET Web API", "PostgreSQL", "React", "RESTful API"],
     },
+    {
+      company: "resume.company_3.name",
+      role: "resume.company_3.role",
+      period: "07/2022",
+      endKey: "09/2022",
+      description: "resume.company_3.description",
+      tags: ["HTML", "CSS", "WordPress", "SEO"],
+    },
   ];
 
   education: Education[] = [

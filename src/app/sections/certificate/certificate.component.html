@@ -5,7 +5,7 @@
         <h1 class="section-title">{{ "certificate.title" | translate }}</h1>
       </div>
       <div class="certs__grid">
-        @for (cert of certificates; track cert.id) {
+        @for (cert of sortedCertificates; track cert.id) {
           <div class="cert-card animate-fade-up">
             <div class="cert-card__badge">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
